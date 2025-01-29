@@ -52,7 +52,7 @@ const processSteps = [
   },
   {
     name: "Design",
-    description: "The Design phase is where you bring your insights to life.",
+    description: "<p>The Design phase is where you bring your insights to life.</p><a href='#' onclick='showStakeholderInfo()'>Learn about team review</a>",
     tasks: [
       "Host a co-design workshop to explore options",
       "[content framing]",
@@ -348,11 +348,11 @@ function showTimelineInput() {
       selectedOptions[step].forEach((task) => {
         const taskDiv = document.createElement("div")
         taskDiv.innerHTML = `
-                    <h4>${task}</h4>
-                    <label for="${task}-start">Start Date:</label>
-                    <input type="date" id="${task}-start" name="${task}-start" class="usa-input" required>
-                    <label for="${task}-end">End Date:</label>
-                    <input type="date" id="${task}-end" name="${task}-end" class="usa-input" required>
+                    <h4>${task}</h4><div class="date-input-group">
+                    <div><label for="${task}-start">Start Date:</label>
+                    <div class="usa-date-picker"><input type="date" id="${task}-start" name="${task}-start" class="usa-input" required></div></div>
+                    <div><label for="${task}-end">End Date:</label>
+                    <div class="usa-date-picker"><input type="date" id="${task}-end" name="${task}-end" class="usa-input" required></div></div></div>
                 `
         timelineTasks.appendChild(taskDiv)
       })
@@ -446,6 +446,23 @@ function exportTimelineToCSV() {
   document.body.appendChild(link)
   link.click()
   document.body.removeChild(link)
+}
+
+function showStakeholderInfo() {
+    previousStep = currentStep;
+    document.getElementById('wizard').classList.add("hidden");
+    document.getElementById('stakeholder-info').classList.remove("hidden");
+    document.getElementById('step-indicator').classList.add("hidden");
+    document.getElementById('buttonGroup').classList.add("hidden");
+}
+
+function hideStakeholderInfo() {
+    document.getElementById('stakeholder-info').classList.add("hidden");
+    document.getElementById('wizard').classList.remove("hidden");
+    document.getElementById('step-indicator').classList.remove("hidden");
+    document.getElementById('buttonGroup').classList.remove("hidden");
+    currentStep = previousStep;
+    updateStepDisplay();
 }
 
 // Initialize the wizard

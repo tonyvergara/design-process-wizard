@@ -52,10 +52,12 @@
             height: 20px;
             margin-top: 5px;
         }
+        .date-input-group {display:flex;}
+        .date-input-group > div {padding: 0 16px 0 0;}
     </style>
 </head>
 <body>
-    <header class="usa-header usa-header--basic">
+    <header class="usa-header usa-header--basic bg-accent-cool-darker text-white">
         <div class="usa-nav-container">
             <div class="usa-navbar">
                 <div class="usa-logo" id="basic-logo">
@@ -67,7 +69,7 @@
     <main class="usa-section">
         <div class="grid-container">
             <div id="wizard" class="usa-prose">
-                <div class="usa-step-indicator" aria-label="progress">
+                <div class="usa-step-indicator" aria-label="progress" id="step-indicator">
                     <ol class="usa-step-indicator__segments">
                         <!-- Step indicators will be dynamically generated -->
                     </ol>
@@ -84,7 +86,7 @@
                 <!-- Steps will be dynamically generated here -->
 
 
-                <div id="summary-page" class="step hidden" data-step="summary">
+                <div id="summary-page" class="step hidden bg-accent-cool-lighter padding-2" data-step="summary">
                     <h2>Summary</h2>
                     <h3 id="initiative-title"></h3>
                     <div id="summary"></div>
@@ -98,7 +100,7 @@
                     <button class="usa-button" onclick="generateTimeline()">Generate Timeline</button>
                 </div>
 
-                <div id="timeline-view" class="hidden" data-step="timeline-view">
+                <div id="timeline-view" class="hidden bg-accent-cool-lighter padding-2" data-step="timeline-view">
                     <h2>Timeline View</h2>
                     <div class="timeline-container">
                         <div id="timeline" class="timeline"></div>
@@ -106,6 +108,21 @@
                     <button class="usa-button" onclick="exportTimelineToCSV()">Export Timeline to CSV</button>
                 </div>
             </div>
+            <div id="stakeholder-info" class="hidden usa-prose"><div>
+                    <h2>Stakeholder Review Process</h2>
+                    <p>Stakeholder review should start with the immediate project team and broaden as the team gets additional clarity on the work to be done. This approach ensures that feedback is gathered efficiently and effectively throughout the design process.</p>
+                    <p>Key stakeholders may include:</p>
+                    <ul>
+                        <li>Immediate project team members</li>
+                        <li>Design leads and managers</li>
+                        <li>Product managers</li>
+                        <li>Marketing managers</li>
+                        <li>Compliance specialists</li>
+                        <li>End-users or customer representatives</li>
+                    </ul>
+                    <p>As the project progresses, involve broader stakeholder groups to ensure comprehensive feedback and buy-in.</p>
+                    <button class="usa-button" onclick="hideStakeholderInfo()">Back</button>
+                </div></div>
             <div class="usa-button-group" id="buttonGroup">
                 <button id="prevBtn" class="usa-button usa-button--outline" onclick="navigate(-1)">Previous</button>
                 <button id="nextBtn" class="usa-button" onclick="navigate(1)">Next</button>
