@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Process Wizard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uswds/3.6.1/css/uswds.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uswds/3.6.1/js/uswds-init.min.js"></script>
+    <style>
+        .step {
+            display: none;
+        }
+        .custom-task {
+            margin-top: 10px;
+        }
+        .step-content {
+            display: flex;
+            justify-content: space-between;
+        }
+        .step-description {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .task-list {
+            flex: 1;
+        }
+        .hidden {display:none;}
+        .task-list .usa-button, div#buttonGroup, #start-page .usa-button {margin-top: 16px;}
+        .step-description p {margin-top: 0;}
+    </style>
+</head>
+<body>
+    <header class="usa-header usa-header--basic">
+        <div class="usa-nav-container">
+            <div class="usa-navbar">
+                <div class="usa-logo" id="basic-logo">
+                    <em class="usa-logo__text">Design Process Wizard</em>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="usa-section">
+        <div class="grid-container">
+            <div id="wizard" class="usa-prose">
+                <div class="usa-step-indicator" aria-label="progress">
+                    <ol class="usa-step-indicator__segments">
+                        <!-- Step indicators will be dynamically generated -->
+                    </ol>
+                </div>
+
+                <div id="start-page" class="step" data-step="0">
+                    <h2>Welcome to the Design Process Wizard</h2>
+                    <p>This wizard will guide you through the design process, allowing you to select activities and deliverables for each phase.</p>
+                    <label for="initiative">Initiative Name:</label>
+                    <input type="text" id="initiative" name="initiative" class="usa-input" required>
+                    <button class="usa-button" onclick="startWizard()">Begin</button>
+                </div>
+
+                <!-- Steps will be dynamically generated here -->
+
+                <div id="summary-page" class="step" data-step="summary">
+                    <h2>Summary</h2>
+                    <h3 id="initiative-title"></h3>
+                    <div id="summary"></div>
+                    <button id="downloadBtn" class="usa-button hidden" onclick="exportToCSV()">Export to CSV</button>
+                    <button id="createTimelineBtn" class="usa-button hidden" onclick="showTimelineInput()">Create Timeline</button>
+                </div>
+            </div>
+            <div class="usa-button-group" id="buttonGroup">
+                <button id="prevBtn" class="usa-button usa-button--outline" onclick="navigate(-1)">Previous</button>
+                <button id="nextBtn" class="usa-button" onclick="navigate(1)">Next</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uswds/3.6.1/js/uswds.min.js"></script>
+    <script src="./wizard.js"></script>
+</body>
+</html>
