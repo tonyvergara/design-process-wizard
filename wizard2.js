@@ -16,6 +16,7 @@ const processSteps = [
       "Create project plan",
       "Identify key teammates who are impacted by this work",
       "Host a kickoff meeting with the broader team",
+      "Determine if we'll need user research",
     ],
   },
   {
