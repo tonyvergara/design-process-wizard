@@ -32,21 +32,26 @@ const processSteps = [
   },
   {
     name: "User Research",
-    description: "<p>The User Research phase focuses on understanding your users in depth.</p><h4>Lorem</h4>",
+    description: "<p>The User Research phase focuses on understanding your users in depth.</p><p>In this phase, make sure you're keeping the FAMLI design leadership involved in major decision making processes. Also, report out to other teams as often as possible to build rapport.</p>",
     tasks: [
-      "Conduct user interviews", 
+      "Conduct user interviews",
+      "Draft and send out user surveys",
+      "Host contextual inquiry sessions",
+      "Field studies",
       "Create user personas", 
-      "Develop user journey maps"],
+      "Develop current state user journey maps",
+      "Map out currentr state service blueprints"
+    ],
   },
   {
     name: "Strategy",
-    description: "The Strategy phase involves defining the direction and approach for the project.",
+    description: "<p>The Strategy phase involves defining the direction and approach for the project.</p><a href='#' onclick='showStakeholderInfo()'>Learn about team review</a>",
     tasks: [
       "Update project goals and objectives",
       "Draft SBARs for key product decisions",
       "Draft strategy deck to share findings out to wider team",
       "Develop content strategy",
-      "Create user flows/service blueprints to visualize end-to-end process",
+      "Create future state user flows/journey maps/service blueprints to visualize end-to-end process",
       "Draft information architecture",
     ],
   },
@@ -348,7 +353,8 @@ function showTimelineInput() {
       selectedOptions[step].forEach((task) => {
         const taskDiv = document.createElement("div")
         taskDiv.innerHTML = `
-                    <h4>${task}</h4><div class="date-input-group">
+                    <div class="date-input-group padding-bottom-4">
+                    <h4 class="padding-right-2">${task}</h4>
                     <div><label for="${task}-start">Start Date:</label>
                     <div class="usa-date-picker"><input type="date" id="${task}-start" name="${task}-start" class="usa-input" required></div></div>
                     <div><label for="${task}-end">End Date:</label>
