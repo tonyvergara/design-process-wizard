@@ -17,17 +17,17 @@ That's where this wizard comes in! Just as you're beginning to plan out your pro
 
 ## Release Notes
 
-v0.0 — [Date Unknown] — [NEW FEATURE] Created the basic framework using Perplexity.
-v0.1 — [Date Unknown] — [FEATURE ENHANCEMENT] Added in javascript for alternative pathing
-v0.2 — [Date Unknown] — [VISUAL DESIGN] Added in USWDS via CDN link
-v0.3 — [Date Unknown] — [DATA] Updated process data
-v1.0 — [Date Unknown] — [NEW FEATURE] *Create a task list!* Go step-by-step, building your customized task list from a list of pre-set options.
-v1.1 — [Date Unknown] — [DATA] Move process data to JavaScript. Only have to update information in one place
-v1.2 — [Date Unknown] — [FEATURE ENHANCEMENT] *Task List: "Add a custom task/deliverable"* 
-v1.3 — [Date Unknown] — [FEATURE ENHANCEMENT] *Export Task List as CSV* Make it possible for
-v2.0 — [Date Unknown] — [NEW FEATURE] *Make a Timeline* Add dates to each task to get a full view of the project and the relative ordering of each task. This also includes functionality to export the timeline as CSV)
-v2.1 — [Jan 29, 2025] — [VISUAL DESIGN] Updates to visual styling incl. USWDS overrides.
-v2.2 — [Jan 30, 2025] — [DOCS] Updated this Readme.
+* v0.0 — [Date Unknown] — [NEW FEATURE] Created the basic framework using Perplexity.
+* v0.1 — [Date Unknown] — [FEATURE ENHANCEMENT] Added in javascript for alternative pathing
+* v0.2 — [Date Unknown] — [VISUAL DESIGN] Added in USWDS via CDN link
+* v0.3 — [Date Unknown] — [DATA] Updated process data
+* v1.0 — [Date Unknown] — [NEW FEATURE] *Create a task list!* Go step-by-step, building your customized task list from a list of pre-set options.
+* v1.1 — [Date Unknown] — [DATA] Move process data to JavaScript. Only have to update information in one place
+* v1.2 — [Date Unknown] — [FEATURE ENHANCEMENT] *Task List: "Add a custom task/deliverable"* 
+* v1.3 — [Date Unknown] — [FEATURE ENHANCEMENT] *Export Task List as CSV* Make it possible for
+* v2.0 — [Date Unknown] — [NEW FEATURE] *Make a Timeline* Add dates to each task to get a full view of the project and the relative ordering of each task. This also includes functionality to export the timeline as CSV)
+* v2.1 — [Jan 29, 2025] — [VISUAL DESIGN] Updates to visual styling incl. USWDS overrides.
+* v2.2 — [Jan 30, 2025] — [DOCS] Updated this Readme.
 
 
 ## Backlog:
